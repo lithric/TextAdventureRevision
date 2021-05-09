@@ -1,0 +1,46 @@
+.game_event {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    grid: "prompt" 60% 
+          "choice";
+}
+
+#game_choice {
+    display: grid;
+    justify-content: center;
+    align-self: baseline;
+    height: 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    gap: 20px 50px;
+}
+
+#game_choice button {
+    width: 400px;
+}
+
+#game_choice input {
+    width: 400px;
+}
+
+input {
+    border-color: rgb(20,20,20);
+    border-radius: 40px;
+    background-color: rgb(0,0,20);
+    outline: none;
+    font-size: 40px;
+    text-indent: 20px;
+    color: #0f0;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.2);
+}
+
+input:focus::placeholder {
+    visibility: hidden;
+}

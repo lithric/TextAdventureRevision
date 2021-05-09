@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    color: #0f0;
+    overflow: hidden;
+}
+
+.menu_container {
+    display: grid;
+    grid: "options menu"
+          " . credits";
+    transform: translate(-100vw,0);   
+}
+
+#start_container::-ms-value {
+    color: red;
+}
+
+
+section#options_section {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    grid-area: options;
+}
+
+section#credits_section {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    grid-area: credits;
+}
+
+section#credits_section button:first-of-type {
+    position: absolute;
+    bottom: 0;
+}
+
+#menu_section {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-area: menu;
+}
+
+#menu_options {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+    justify-items: center;
+    align-self: start;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@keyframes FadeToWhite {
+    0% {
+        background-color: rgba(255,255,255,0);
+    }
+    100% {
+        background-color: rgba(255,255,255,1);
+    }
+}
+
+@keyframes FadeOut {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+        color: #000;
+    }
+    20% {
+        opacity: 0;
+        color: #000;
+    }
+    100% {
+        opacity: 1;
+        color: #0f0;
+    }
+}
+
+button {
+    padding: 10px;
+    color: #0f0;
+    background-color: #000;
+    border: #0f0 solid 2px;
+    outline: none;
+    font-size: 50px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+button:hover {
+    background-color: #111;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #000;
+    transform: scale(0.9);
+}
+
+.title {
+    font-size: 100px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+@keyframes Menu-Options {
+    0% {
+        transform: translate(-100vw,0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes Options-Menu {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(-100vw,0);
+    }
+}
+
+@keyframes Menu-Credits {
+    0% {
+        transform: translate(-100vw,0);
+    }
+    100% {
+        transform: translate(-100vw,-100vh);
+    }
+}
+
+@keyframes Credits-Menu {
+    0% {
+        transform: translate(-100vw,-100vh);
+    }
+    100% {
+        transform: translate(-100vw,0);
+    }
+}
